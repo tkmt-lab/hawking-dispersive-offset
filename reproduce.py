@@ -46,7 +46,14 @@ def close(a, b, rel, abs_=0.0):
 
 
 def deep_close(a, b, rel, path="$"):
-    """Compare two JSON values; numbers within rel, everything else exactly."""
+    """Compare two JSON values; numbers within rel, everything else exactly.
+
+    Fields named maxres_* are fit residuals at roundoff level (about 1e-12); their last
+    digits depend on the platform's floating-point library, so they are compared with an
+    absolute tolerance of 1e-10 instead (both values must stay below that level)."""
+    if path.rsplit(".", 1)[-1].startswith("maxres_") and isinstance(a, float) and isinstance(b, float):
+        assert abs(a) < 1e-10 and abs(b) < 1e-10, (path, a, b)
+        return
     if isinstance(a, dict):
         assert isinstance(b, dict) and set(a) == set(b), (path, sorted(set(a) ^ set(b))[:5])
         for k in a:
