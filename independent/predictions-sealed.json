@@ -1,0 +1,11 @@
+{
+  "purpose": "Predictions of b0 = lim Lambda^2 [T(0)/T_H - 1] (kappa = 1) for the independent numerical check. Recorded before the independent computation; not given to it.",
+  "formula": "b0 = (v'''' - 4 v'' v''' + 3 v''^3)/12 at the horizon x = 0, v'(0) = 1 (article Eq. (19); Eq. (18) in its earlier version 1.1)",
+  "profiles": {
+    "T05": {"v": "-1 + 0.5*tanh(2x)", "b0": 0.0},
+    "B4":  {"v": "-1 + 0.6*tanh(x/0.6 - 0.7x^2 + 0.5x^3)", "b0": 1.1336017777777776},
+    "N1":  {"v": "-1 + 0.5*tanh(2x + 0.4x^2 + 0.3x^3)", "b0": -0.6373333333333336},
+    "N2":  {"v": "-1 + A*(erf((x+0.3)/0.7) - erf(0.3/0.7)), A = 0.7*sqrt(pi)/2*exp((0.3/0.7)^2) = 0.7454377030997126", "b0": -0.41649312786339054}
+  },
+  "computed_by": "pred.py in this directory (plain float series arithmetic); B4 reproduces the paper's value 1.1336018"
+}

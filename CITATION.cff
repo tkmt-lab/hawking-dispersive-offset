@@ -1,0 +1,30 @@
+{
+  "message": "Cite the article and the exact packet version.",
+  "title": "Low-frequency offset of a dispersive analogue Hawking temperature",
+  "type": "software",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "family-names": "Takimoto",
+      "given-names": "Tatsuhiko",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "license": "Apache-2.0",
+  "cff-version": "1.2.0",
+  "repository-code": "https://github.com/tkmt-lab/hawking-dispersive-offset",
+  "preferred-citation": {
+    "type": "article",
+    "title": "Finite-dispersion temperature corrections in stationary quartic-superluminal Hawking scattering",
+    "authors": [
+      {
+        "family-names": "Takimoto",
+        "given-names": "Tatsuhiko",
+        "affiliation": "Independent researcher"
+      }
+    ],
+    "version": "1.2",
+    "license": "CC-BY-4.0",
+    "url": "https://github.com/tkmt-lab/hawking-dispersive-offset"
+  }
+}

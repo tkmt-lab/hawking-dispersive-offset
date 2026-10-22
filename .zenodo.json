@@ -1,0 +1,28 @@
+{
+  "title": "Finite-dispersion temperature corrections in stationary quartic-superluminal Hawking scattering",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Article (version 1.2) with stored results and code. For a stationary one-dimensional flow with quartic superluminal dispersion and a single horizon, the low-frequency limit of the ratio temperature is reduced to a zero-frequency problem, and a formal expansion gives the relative offset kappa g'''(0)/(12 Lambda^2), where g expresses v' as a function of 1+v. The result is conditional on stated assumptions (A1-A3) that are not proved; it is supported by stage-wise numerical checks, a prediction-first test and an independent numerical computation on four profiles. The frequency-curvature coefficient is compared over 19 profiles with a known phase-integral formula. No human expert review. Text and data: CC BY 4.0; code: Apache 2.0.",
+  "creators": [
+    {
+      "name": "Tatsuhiko Takimoto",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "version": "1.0.0",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "analogue gravity",
+    "Hawking radiation",
+    "dispersion",
+    "asymptotic analysis",
+    "scattering"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tkmt-lab/hawking-dispersive-offset",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

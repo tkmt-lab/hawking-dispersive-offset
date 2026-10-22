@@ -1,0 +1,308 @@
+{
+  "version": "1.0.0",
+  "paper": {
+    "path": "paper-hawking-b0-v1.2-en.tex",
+    "sha256": "8a9b1bb8c1b6541d576ac9d4f447ac9427924fe8697dcd7a091b266d6b2b571a",
+    "bytes": 52034
+  },
+  "pdf": {
+    "path": "paper-hawking-b0-v1.2-en.pdf",
+    "sha256": "ffb2bc4eabdf9bc77c83c5b1ffe772b098013ccf5bde89a425599e2971ddf9cf",
+    "bytes": 210879
+  },
+  "scope": {
+    "formal_asymptotic_calculation": true,
+    "assumptions_A1_A3_proved": false,
+    "remainder_bound": false,
+    "Lean_proof": false,
+    "human_expert_review": false,
+    "priority_established": false,
+    "independent_numerical_check_profiles": 4,
+    "claims_error_in_prior_work": false
+  },
+  "evidence_type_meaning": {
+    "formal-derivation-under-assumptions-A1-A3": "formal asymptotic calculation; holds if A1-A3 of Sec. 7.1 hold; no remainder bound",
+    "formal-consequence-of-known-phase-integral": "short formal consequence of a published formula",
+    "numerical": "computed with the main code base (src/, b0/)",
+    "independent-numerical": "computed by separately written code that shares no code with the main code base",
+    "ai-review": "read and partly re-derived by AI sessions not involved in writing; not human peer review"
+  },
+  "claims": [
+    {
+      "id": "zero-frequency-reduction",
+      "paper_label": "eq:T0",
+      "statement": "Under the hypotheses of Sec. 7.1 and A1, A2, T(0) = |W_c|/(2 Lambda^2 N M) for all Lambda.",
+      "evidence_types": [
+        "formal-derivation-under-assumptions-A1-A3",
+        "numerical",
+        "ai-review"
+      ],
+      "evidence": [
+        {
+          "path": "b0/check_known.json",
+          "sha256": "3a4838f26e8aa5a60f1fd3745adb7db8429a183744c032b85152b556fe56b01a",
+          "bytes": 38084
+        },
+        {
+          "path": "b0/check_blind.json",
+          "sha256": "bb10ab7e3afa90e22287277994b25d7c927bc16e9c9a250369c37f607b5d3066",
+          "bytes": 14062
+        },
+        {
+          "path": "b0/zero_mode.py",
+          "sha256": "9532b35d862cdcd4648fe42ca5aed1be691f4fb1ffc1ddedc1e0893e8148eb1e",
+          "bytes": 2423
+        }
+      ],
+      "reproduce": "reproduce.py step 2 (formula), step 3 (two scattering limits)",
+      "numbers": "agrees with extrapolated omega->0 scattering limits within 1.3e-10 in 28 cases",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "b0-formula",
+      "paper_label": "eq:b0",
+      "statement": "T(0)/T_H - 1 = b0 kappa^2/Lambda^2 + O(Lambda^-4), b0 = g'''(0)/(12 kappa), as a formal expansion.",
+      "evidence_types": [
+        "formal-derivation-under-assumptions-A1-A3",
+        "numerical",
+        "independent-numerical",
+        "ai-review"
+      ],
+      "evidence": [
+        {
+          "path": "b0/local_expansion.py",
+          "sha256": "6760c7c467e4cff946bd494e428bb2fe5bb90ea824918c9f7d7ee8b7e59f7f49",
+          "bytes": 9590
+        },
+        {
+          "path": "b0/local_expansion_out_order6.json",
+          "sha256": "4db23f9fe7514ab2c43f321b06a2666af0bff55e8120fea625945ce0033bf6a8",
+          "bytes": 6545
+        },
+        {
+          "path": "b0/g_form_out.json",
+          "sha256": "79a1b5bb57c30209db4cfeb4bae7241d27aee894d746b3da53dedf16f10c212a",
+          "bytes": 495
+        },
+        {
+          "path": "b0/b0_summary.json",
+          "sha256": "cd07292e3108e2f0bcde583f1ff7aed5c1d59318e34602d63c28fbb956126902",
+          "bytes": 5863
+        },
+        {
+          "path": "independent/analysis.json",
+          "sha256": "c27a0700db3c5c267e903396e0c6e11306cabafdc90f780ce82b5269ec3be839",
+          "bytes": 203059
+        },
+        {
+          "path": "independent/predictions-sealed.json",
+          "sha256": "d2a193df43193853c5aa6b519688b0c770665666f88cdf2343f7157d7fd18c81",
+          "bytes": 830
+        }
+      ],
+      "reproduce": "reproduce.py steps 1 (exact algebra), 2, 6",
+      "numbers": "exact rational coefficients; AI readers reproduced the algebra through eps^6",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "b0-stagewise-checks",
+      "paper_label": "sec:checks",
+      "statement": "Seven profiles: extrapolated b0 from scattering agrees with Eq. (19) within 1.2e-6 except M4, B2 (Table 1).",
+      "evidence_types": [
+        "numerical"
+      ],
+      "evidence": [
+        {
+          "path": "b0/b0_summary.json",
+          "sha256": "cd07292e3108e2f0bcde583f1ff7aed5c1d59318e34602d63c28fbb956126902",
+          "bytes": 5863
+        },
+        {
+          "path": "b0/check_known.json",
+          "sha256": "3a4838f26e8aa5a60f1fd3745adb7db8429a183744c032b85152b556fe56b01a",
+          "bytes": 38084
+        },
+        {
+          "path": "b0/b1_check.json",
+          "sha256": "24907d567bc38618e6f2bab47447549a879e8cc319ff587f06028c8cd6b077eb",
+          "bytes": 2575
+        },
+        {
+          "path": "exhibits/b0-table.tex",
+          "sha256": "55035d43ca465ab6dea79307de3560a63aa3ab1ff4794698765192b5a6885a85",
+          "bytes": 987
+        }
+      ],
+      "reproduce": "reproduce.py steps 4, 5",
+      "numbers": "see Table 1",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "b0-prediction-first",
+      "paper_label": "sec:blind",
+      "statement": "For B3, B4 the predictions recorded before any calculation meet the three pre-set criteria.",
+      "evidence_types": [
+        "numerical"
+      ],
+      "evidence": [
+        {
+          "path": "b0/blind_predictions.json",
+          "sha256": "44535d77cd5ce9947228de3127f1325ea20084b1280598ddd3cbdad25691844b",
+          "bytes": 1995
+        },
+        {
+          "path": "b0/check_blind.json",
+          "sha256": "bb10ab7e3afa90e22287277994b25d7c927bc16e9c9a250369c37f607b5d3066",
+          "bytes": 14062
+        },
+        {
+          "path": "b0/b0_summary.json",
+          "sha256": "cd07292e3108e2f0bcde583f1ff7aed5c1d59318e34602d63c28fbb956126902",
+          "bytes": 5863
+        }
+      ],
+      "reproduce": "reproduce.py step 4",
+      "numbers": "b0 differences +1.0e-7 (B3), -1.4e-8 (B4)",
+      "qualification": "prediction-first test by the same investigators, not a blinded experiment",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "b0-independent-numerical",
+      "paper_label": "sec:computed",
+      "statement": "A separately written scattering code reproduces the predicted b0 for T05, B4, N1, N2.",
+      "evidence_types": [
+        "independent-numerical"
+      ],
+      "evidence": [
+        {
+          "path": "independent/analysis.json",
+          "sha256": "c27a0700db3c5c267e903396e0c6e11306cabafdc90f780ce82b5269ec3be839",
+          "bytes": 203059
+        },
+        {
+          "path": "independent/refined.json",
+          "sha256": "7efff56fa91bed3a35965625bd06a1937490be58ed45b8ec33c39462b15eab65",
+          "bytes": 172726
+        },
+        {
+          "path": "independent/predictions-sealed.json",
+          "sha256": "d2a193df43193853c5aa6b519688b0c770665666f88cdf2343f7157d7fd18c81",
+          "bytes": 830
+        },
+        {
+          "path": "independent/scatter.py",
+          "sha256": "533ef551eb273cd88134f12183c4881831003926b62b2b66892411a584fa7898",
+          "bytes": 8903
+        }
+      ],
+      "reproduce": "reproduce.py step 6",
+      "numbers": "differences -4.1e-8, -5.8e-9, +3.1e-8, -1.1e-7",
+      "qualification": "numerical agreement on four flows; 42-condition ranges are sensitivities, T05 range misses 0 by 5.7e-9; not a proof of A1-A3",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "b1-formula",
+      "paper_label": "app:b1",
+      "statement": "The Lambda^-4 coefficient b1 as an 18-term polynomial in the g-coefficients (formal).",
+      "evidence_types": [
+        "formal-derivation-under-assumptions-A1-A3",
+        "numerical",
+        "ai-review"
+      ],
+      "evidence": [
+        {
+          "path": "b0/g_form_out.json",
+          "sha256": "79a1b5bb57c30209db4cfeb4bae7241d27aee894d746b3da53dedf16f10c212a",
+          "bytes": 495
+        },
+        {
+          "path": "b0/b1_check.json",
+          "sha256": "24907d567bc38618e6f2bab47447549a879e8cc319ff587f06028c8cd6b077eb",
+          "bytes": 2575
+        },
+        {
+          "path": "exhibits/b1-polynomial.tex",
+          "sha256": "c75aa7c5c89782eaf4e7e0379de9f57025ff8f7afb357561b41e079092f7d856",
+          "bytes": 358
+        }
+      ],
+      "reproduce": "reproduce.py steps 1, 5",
+      "numbers": "fits at Lambda = 28-80 agree within 0.15% for seven profiles",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "curvature-phase-integral",
+      "paper_label": "sec:curvature",
+      "statement": "The extrapolated omega^2/Lambda^2 coefficient agrees with the phase-integral expression Eq. (16) within 1.3e-3 for 19 smooth profiles.",
+      "evidence_types": [
+        "formal-consequence-of-known-phase-integral",
+        "numerical"
+      ],
+      "evidence": [
+        {
+          "path": "results/c_final.json",
+          "sha256": "74b700e1e2bb0707e4e880bda99de4d149f3ef53018ae0640923a16131ce3534",
+          "bytes": 7002
+        },
+        {
+          "path": "results/c_summary.json",
+          "sha256": "b28addf935872f918230079f2ddaf17b9f10361e261c894994941dada3470ad7",
+          "bytes": 249730
+        },
+        {
+          "path": "exhibits/curvature-table.tex",
+          "sha256": "cb566273742cde894fa44e97bc1ddea8b492eed35960f9a4a758ffa5de1bb6ac",
+          "bytes": 619
+        }
+      ],
+      "reproduce": "reproduce.py steps 4, 5",
+      "numbers": "max |c_ext - c_phase| = 0.001269",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "two-method-scattering",
+      "paper_label": "sec:discussion",
+      "statement": "Two separately developed scattering methods agree on the symmetric tanh comparison set at the recorded precision.",
+      "evidence_types": [
+        "independent-numerical"
+      ],
+      "evidence": [
+        {
+          "path": "results/compare_first_impl.json",
+          "sha256": "1a26d8ed48082e167ccb284d0b8c8fd77260f40bcd34fdcc0cb198cbc3453a8f",
+          "bytes": 83671
+        }
+      ],
+      "reproduce": "stored comparison only; the first method is not distributed",
+      "numbers": "79 of 93 numerical entries within the printed half-unit; remaining excess below 9.4e-11",
+      "human_review": false,
+      "lean": []
+    },
+    {
+      "id": "effective-horizon-comparison",
+      "paper_label": "eq:cefh",
+      "statement": "The measured curvature differs from the coefficient of Del Porro-Liberati-Schneider Eq. (133) applied directly; no error in their analysis is claimed.",
+      "evidence_types": [
+        "numerical"
+      ],
+      "evidence": [
+        {
+          "path": "results/c_final.json",
+          "sha256": "74b700e1e2bb0707e4e880bda99de4d149f3ef53018ae0640923a16131ce3534",
+          "bytes": 7002
+        }
+      ],
+      "reproduce": "reproduce.py step 4",
+      "numbers": "see Fig. 1",
+      "human_review": false,
+      "lean": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "pages": 15,
+  "pdf_sha256": "ffb2bc4eabdf9bc77c83c5b1ffe772b098013ccf5bde89a425599e2971ddf9cf",
+  "source_sha256": "8a9b1bb8c1b6541d576ac9d4f447ac9427924fe8697dcd7a091b266d6b2b571a",
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "unresolved_marks": false,
+  "engine": "Tectonic",
+  "all_pages_viewed": true,
+  "visual_inspection": {
+    "resolution_dpi": 80,
+    "checked": "clipping, equation layout, table alignment, figure labels and legend, pagination, reference numbering and readability"
+  }
+}

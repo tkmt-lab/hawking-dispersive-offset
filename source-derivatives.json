@@ -1,0 +1,166 @@
+{
+  "note": "Files whose public copy differs from the research original only by exact text replacements (internal labels in comments and descriptive strings, one environment-variable name, one JSON field name, exhibit paths); the replaced originals are not reproduced here. Numbers are unchanged.",
+  "records": [
+    {
+      "original_sha256": "c612b12e6927c195a67149859f7be7312e14cd7c56aad6b0e4daedc9667df625",
+      "public": {
+        "path": "b0/analyze_b0.py",
+        "sha256": "a9f300cdb62418dd0c52eb2b910d4c3b23090118c6a5db19a855af2c22437eb0",
+        "bytes": 2742
+      },
+      "replacements": 3,
+      "replacement_texts": [
+        "cfit = json.load",
+        "b0_inf_frequency_fit=cfit.get(key, {}).get('b0_inf'))",
+        "f\" | frequency-fit b0_inf {S['b0_inf_frequency_fit']}"
+      ]
+    },
+    {
+      "original_sha256": "15283a8f928e8aecf3ac04a4977a88312752313bf950df809f5f5f4e6c70088a",
+      "public": {
+        "path": "b0/b0_summary.json",
+        "sha256": "cd07292e3108e2f0bcde583f1ff7aed5c1d59318e34602d63c28fbb956126902",
+        "bytes": 5863
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "\"b0_inf_frequency_fit\""
+      ]
+    },
+    {
+      "original_sha256": "5af1a2b2927fd7bbb8ca98ad66a89a6cd5a28a845e7b517e60fbea003a10cc53",
+      "public": {
+        "path": "b0/b0_summary.txt",
+        "sha256": "b0773448286b999e0661e69b79422845d828876d8253b1a77f5f5877dc84c376",
+        "bytes": 1598
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "| frequency-fit b0_inf"
+      ]
+    },
+    {
+      "original_sha256": "2e8d17ef865732ec01753e748cd39ae78626fbc02594e5e75d6c6b8ec7b313ed",
+      "public": {
+        "path": "b0/blind_profiles.py",
+        "sha256": "7bb7f7a81c88634d2d921c6c83f14e868da10c2470912b80da2f332f231a130a",
+        "bytes": 2563
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "\"\"\"b0 prediction-first test: two new profile families, not used in the curvature study."
+      ]
+    },
+    {
+      "original_sha256": "06494fb4a19ffd5dc316f7c5472a876ec4e609a753ee2cc1c806f120f8b76147",
+      "public": {
+        "path": "b0/check_steps.py",
+        "sha256": "cd9aabca38d9511b66a1165484c6d4108ee9ca420765fc7e131489231824f44c",
+        "bytes": 5215
+      },
+      "replacements": 2,
+      "replacement_texts": [
+        "\"\"\"b0: check each step",
+        "PROFILES = {  # profiles of the curvature study (not prediction-first)"
+      ]
+    },
+    {
+      "original_sha256": "3916e427ceec67d08e347936da8f4932fa2d8351c01d5767ad170a5a01db210a",
+      "public": {
+        "path": "b0/local_expansion.py",
+        "sha256": "6760c7c467e4cff946bd494e428bb2fe5bb90ea824918c9f7d7ee8b7e59f7f49",
+        "bytes": 9590
+      },
+      "replacements": 2,
+      "replacement_texts": [
+        "\"\"\"b0: exact-rational",
+        "Derivation (see the article, Section 7):"
+      ]
+    },
+    {
+      "original_sha256": "3239f304e8ea8cb0fc3ecaac719d3f667592f1e9b839dffeb0ec8703bb810c71",
+      "public": {
+        "path": "b0/zero_mode.py",
+        "sha256": "9532b35d862cdcd4648fe42ca5aed1be691f4fb1ffc1ddedc1e0893e8148eb1e",
+        "bytes": 2423
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "\"\"\"b0, step check:"
+      ]
+    },
+    {
+      "original_sha256": "33eb59e22ec8afd9bfc25f0419783b92603c101106edce0ddf37ba03e5ef56d7",
+      "public": {
+        "path": "exhibits/all-profiles.md",
+        "sha256": "1ba904abc53978e2ff8072fa8771a11d1bc728a7c81e8448344b2f4b3899f01e",
+        "bytes": 1759
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "| Input key |"
+      ]
+    },
+    {
+      "original_sha256": "4b408c6b0af3210d55cbe86dd1e77e8e00c8bfb67267e74ce5de821129450384",
+      "public": {
+        "path": "independent/predictions-sealed.json",
+        "sha256": "d2a193df43193853c5aa6b519688b0c770665666f88cdf2343f7157d7fd18c81",
+        "bytes": 830
+      },
+      "replacements": 2,
+      "replacement_texts": [
+        "Predictions of b0 = lim Lambda^2 [T(0)/T_H - 1] (kappa = 1) for the independent numerical check. Recorded before the independent computation; not given to it.",
+        "(article Eq. (19); Eq. (18) in its earlier version 1.1)"
+      ]
+    },
+    {
+      "original_sha256": "7f5abaf2819c8cdb177090e4a672a650fe8b7e9a09e483ba1a1eaaf4401b504b",
+      "public": {
+        "path": "independent/scatter.py",
+        "sha256": "533ef551eb273cd88134f12183c4881831003926b62b2b66892411a584fa7898",
+        "bytes": 8903
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "definitions only, no imports from the main implementation."
+      ]
+    },
+    {
+      "original_sha256": "3cb851ba1db3f78bf177fa5a5467e7efd86ba3e5fbfca4127f347e0bd6252c93",
+      "public": {
+        "path": "paper-hawking-b0-v1.2-en.tex",
+        "sha256": "8a9b1bb8c1b6541d576ac9d4f447ac9427924fe8697dcd7a091b266d6b2b571a",
+        "bytes": 52034
+      },
+      "replacements": 3,
+      "replacement_texts": [
+        "{exhibits/"
+      ]
+    },
+    {
+      "original_sha256": "1100745f3c0f6e1b594745bebafcb43f457555cf81276a1dfc00330141dfea21",
+      "public": {
+        "path": "src/hawking_bvp.py",
+        "sha256": "8540b7b6fef86eedcf135fc46ca5aac1431ff5927325e331e5677e730dd43cc9",
+        "bytes": 15407
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "\"\"\"Boundary-value implementation of the dispersive Hawking scattering problem."
+      ]
+    },
+    {
+      "original_sha256": "bcdcffcb256140835e145e986ba7b95afc5730c29bfc590a7d3996679bb46b3b",
+      "public": {
+        "path": "src/scan_c.py",
+        "sha256": "86401ff95d5ff06a052523a98246d0551d0803fcb5243726ed1e9a7f9658e691",
+        "bytes": 3269
+      },
+      "replacements": 1,
+      "replacement_texts": [
+        "os.environ.get('HIGH_LAM')"
+      ]
+    }
+  ]
+}

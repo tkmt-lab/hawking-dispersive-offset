@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "algebra_cases": 80,
+  "errors": {
+    "state_equivalence_relative": 2.220446049250313e-16,
+    "current_conservation_relative": 1.6018471242508694e-16,
+    "profile_derivative": 1.082416514536129e-15,
+    "constant_propagator": 4.773959096481582e-15
+  },
+  "scope": "same-agent alternative algebra; no independent-agent review"
+}
