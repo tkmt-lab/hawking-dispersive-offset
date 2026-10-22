@@ -7,7 +7,7 @@
   "DOI": null,
   "new_scattering_runs": 0,
   "new_Lean_runs": 0,
-  "created_at": "2026-10-22T04:38:21+00:00",
+  "created_at": "2026-10-22T04:41:11+00:00",
   "files": [
     {
       "path": ".github/workflows/verify.yml",
@@ -61,8 +61,8 @@
     },
     {
       "path": "VERIFICATION-RECORD.md",
-      "sha256": "fe71982d5fa1e8a81d592be303e1db25ec7924d496c68d09f9e52a8176ebc6a5",
-      "bytes": 9957
+      "sha256": "617c0d42847a49582ac086fa719a4a7b0237b7f9498131411d1b48809883c74e",
+      "bytes": 9962
     },
     {
       "path": "b0/analyze_b0.py",
@@ -341,8 +341,8 @@
     },
     {
       "path": "reproduce.py",
-      "sha256": "a15d6fbb484f3ecf58ddce35445b8900bdc2a58e3b018279551b4c03cb27d497",
-      "bytes": 12936
+      "sha256": "7e567c1a2b4743f8ad39c0bfced1fdbbbbd9d9f4e151912bdbaa0045c38ed1e8",
+      "bytes": 12872
     },
     {
       "path": "requirements.txt",
